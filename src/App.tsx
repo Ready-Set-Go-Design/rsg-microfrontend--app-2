@@ -1,3 +1,4 @@
+import { MyCard, MyComponent } from "@ready-set-go-design/rsg-mfe-package-ts";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Observable } from "windowed-observable";
@@ -64,6 +65,13 @@ const App = () => {
           Message from Container: <em>{messageFromContainer}</em>
         </p>
       )}
+      <MyComponent color="red" text="Hello from App 2" />
+      <MyCard
+        title="App 2 Card"
+        body="App 2 Stuff!"
+        action={() => alert("clicked in app 2!")}
+        buttonVariant="contained"
+      />
     </Wrapper>
   );
 };
